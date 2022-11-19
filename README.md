@@ -1,4 +1,5 @@
 # 仕様書
+https://maikurahighschool.github.io/hs.buildmc.jp/
 
 ## サイト内容
 - トップページ
