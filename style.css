@@ -1,6 +1,6 @@
 body{
 	font-family: 'ms gothic';
-	margin-bottom: 100px;
+	margin-bottom: 350px;
 }
 h1{
 	font-size:2em;
@@ -55,10 +55,55 @@ h1{
 #maincontent td:first-child{
 	color:darkgoldenrod ;
 	text-align: center;
-	width: 25%;
+	width: 8em;
 }
 .emp-1{
 	color: white;
 	background-color: #998;
 	padding: 0 10px;
+}
+#sideMenu *{
+	display: inline-block;
+	padding: 8px;
+	border-bottom: solid 1px darkgoldenrod;
+	text-decoration: none;
+	transition: 0.3s;
+	width: 100%;
+}
+#sideMenu h3{
+	color: white;
+	background-color: darkgoldenrod;
+	width: 100%;
+}
+#sideMenu a:hover{
+	background-color: gold;
+}
+#sideMenu :last-child{
+	border-bottom: transparent;
+}
+
+@media(max-width:579.9px){
+	#sideMenu a{
+		width: calc(50% - 6px);
+	}
+}
+
+@media(min-width:580px){
+	#maincontent{
+		display: flex;
+	}
+	#sideMenu{
+		min-width: 25%;
+		max-width: 25%;
+		height: fit-content;
+		margin: 5px;
+		margin-right: 0;
+		/* background-color: #0003; */
+	}
+}
+
+@media(min-width:960px){
+	body{
+		width: 960px;
+	}
 }
