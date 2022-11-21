@@ -22,7 +22,6 @@ h1{
 	color: gold;
 	font-weight: bold;
 	text-decoration: none;
-	transition: all 0.3s;
 }
 #topmenu a:hover{
 	background-color: darkgoldenrod;
@@ -66,17 +65,25 @@ h1{
 	display: inline-block;
 	padding: 8px;
 	border-bottom: solid 1px darkgoldenrod;
+	color: #333;
 	text-decoration: none;
-	transition: 0.3s;
+	transition: 0.3s cubic-bezier(1, 0.25, 1, 1);
 	width: 100%;
+	background-size: 100%;
+	background-position: center;
 }
 #sideMenu h3{
 	color: white;
 	background-color: darkgoldenrod;
 	width: 100%;
 }
+#sideMenu a.ad{
+	height: 100px;
+	text-shadow: 1px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;
+}
 #sideMenu a:hover{
 	background-color: gold;
+	background-size: 110%;
 }
 #sideMenu :last-child{
 	border-bottom: transparent;
