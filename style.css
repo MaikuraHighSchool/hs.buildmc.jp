@@ -7,6 +7,10 @@ body{
 h1{
 	font-size:2em;
 }
+hr{
+	clear: both;
+	border-color: transparent;
+}
 
 /*ヘッダー部分のリンク*/
 
@@ -42,8 +46,9 @@ h1{
 	color: white;
 	font-weight: normal;
 	background: linear-gradient(60deg, darkgoldenrod, #000);
-	margin: 0.75em 0;
+	margin: 0.3em 0 0.2em;
 	padding: 3px 1%;
+	width: 100%;
 }
 #maincontent p{
 	padding-left: 1em;
@@ -70,25 +75,33 @@ h1{
 #maincontent a.topic{
 	display: block;
 	float: left;
-	height: 100px;
+	height: 150px;
 	width: calc(50% - 10px);
-	margin: 0 0px 8px 9px;
+	margin: 0.8em 0px 0em 9px;
 	background: linear-gradient(120deg, white, darkgoldenrod);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position:bottom;
 	text-decoration: none;
-	color: white;
-	text-shadow: 2px 0px 0px black, 1px 1px 0px black, 0px 1px 0px black, -1px 0px black, 0px -1px black;
+	color: black;
+	text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white, -1px 0px white, 0px -1px white;
 	box-shadow: 1px 1px 4px black;
 	transition: all 0.3s;
 }
 #maincontent a.topic span:nth-child(1){
 	display: block;
 	font-size: 1.75em;
+	background-color: #fffe;
+}
+#maincontent a.topic span:nth-child(n + 2){
+	display: block;
+	background-color: #fffb;
 }
 #maincontent a.topic:hover{
-	color: gold;
+	color: black;
+	text-shadow: 2px 0px 0px gold, 1px 1px 0px gold, 0px 1px 0px gold, -1px 0px gold, 0px -1px gold;
+	font-weight: bold;
+	letter-spacing: 1px;
 	background-size: 110%;
 }
 
@@ -108,7 +121,7 @@ h1{
 	border-bottom: solid 1px darkgoldenrod;
 	color: #333;
 	text-decoration: none;
-	transition: 0.3s cubic-bezier(1, 0.25, 1, 1);
+	transition: 0.3s;
 	width: 100%;
 	background-size: 100%;
 	background-position: center;
@@ -145,7 +158,11 @@ h1{
 	#maincontent{
 		display: flex;
 	}
+	#maincontent div:first-child{
+		width: 75%;
+	}
 	#sideMenu{
+		right: 0;
 		min-width: 25%;
 		max-width: 25%;
 		height: fit-content;

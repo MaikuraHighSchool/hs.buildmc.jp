@@ -7,7 +7,7 @@ let headPage = [
 	["受験生の方へ", "for-examinee.html"], 
 	["高校生活", "life.html"], 
 	["学科一覧", "department.html"], 
-	["教員", "teachers.html"], 
+	["生徒・教員", "teachers.html"], 
 	["アクセス", "access.html"]
 ];
 let headPagetag = "";
@@ -22,13 +22,14 @@ let sideMenu = $("sideMenu");
 //横のメニューバーの内容
 let sidePage = [
 	["HOME", "index.html"],
+	["沿革", "history.html"], 
 	["受験生の方へ", "for-examinee.html"], 
 	["高校生活", "life.html"], 
+	["小説作品", "novels.html"],
+	["イラスト作品", "illusts.html"],
 	["学科一覧", "department.html"], 
-	["教員", "teachers.html"], 
+	["生徒・教員", "teachers.html"], 
 	["アクセス", "access.html"],
-	["せ", ""],
-	["、", ""],
 	["せ", ""],
 	["と", ""],
 	["く", ""],
