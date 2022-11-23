@@ -1,14 +1,16 @@
 let header = $("header");
 // console.log(header.innerText);
-let schoolImg = "https://media.discordapp.net/attachments/890957623627776000/1043504255480381460/gennan2.png";
-let headerBackImg = "https://media.discordapp.net/attachments/859350806775332905/1008741476123037816/57.png?width=586&height=410";
+let schoolImg = "https://maikurahighschool.github.io/cdn.hs.buildmc.jp/files/logo.png";
+let headerBackImg = "https://maikurahighschool.github.io/cdn.hs.buildmc.jp/files/headbg.png";
 let headPage = [
 	["HOME", "index.html"], 
 	["受験生の方へ", "for-examinee.html"], 
 	["高校生活", "life.html"], 
 	["学科一覧", "department.html"], 
-	["生徒・教員", "teachers.html"], 
-	["アクセス", "access.html"]
+	["生徒・教員", "members.html"], 
+	["アクセス", "access.html"],
+	["せ、", ""],
+	["せとくれええええ", ""]
 ];
 let headPagetag = "";
 for(i = 0; i < headPage.length; i++){
@@ -16,7 +18,7 @@ for(i = 0; i < headPage.length; i++){
 	if(headPage[i][0] == header.innerText) tmp = '<span>' + headPage[i][0] + '</span>';
 	headPagetag += tmp;
 }
-header.innerHTML = '<div style="display: flex; background-image: url('+ headerBackImg +');background-size: 50%; background-position: right;"><img src="'+ schoolImg +'" alt="校章" style="height: 6em;object-fit: cover;" /><div style="text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;"><h1>私立真意倉高等学校</h1><span>Maikura High School</span><br /><span>為せば成る、為さなくてもなるようにはなる</span></div></div><div id="topmenu" style="display: flex;min-width:max-content;background-color: black;">'+ headPagetag +'</div>';
+header.innerHTML = '<div style="display: flex; background-image: url('+ headerBackImg +');background-size: 50%; background-position: right;"><img src="'+ schoolImg +'" alt="校章" style="height: 6em;object-fit: cover;" /><div style="text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;"><h1>私立真意倉高等学校</h1><span>Maikura High School</span><br /><span>為せば成る、為さなくてもなるようにはなる</span></div></div><div id="topmenu" style="display:flex;white-space:nowrap;height:calc(1em + 30px);overflow-x:scroll ; background-color: black;">'+ headPagetag +'</div>';
 
 let sideMenu = $("sideMenu");
 //横のメニューバーの内容
@@ -28,7 +30,7 @@ let sidePage = [
 	["小説作品", "novels.html"],
 	["イラスト作品", "illusts.html"],
 	["学科一覧", "department.html"], 
-	["生徒・教員", "teachers.html"], 
+	["生徒・教員", "members.html"], 
 	["アクセス", "access.html"],
 	["せ", ""],
 	["と", ""],
@@ -39,8 +41,8 @@ let sidePage = [
 ];
 //広告欄の内容[タイトル,画像元,リンク先]
 let ad = [
-	["1デカい飴とはねよし", "https://media.discordapp.net/attachments/890957623627776000/1043554968134750338/2022-11-19_214809.png", ""],
-	["2モチベは常に低迷期", "https://pbs.twimg.com/profile_banners/1359482140568678401/1660702984", ""]
+	["1デカい飴とはねよし", "https://maikurahighschool.github.io/cdn.hs.buildmc.jp/files/ad_001.png", ""],
+	["2モチベは常に低迷期", "https://maikurahighschool.github.io/cdn.hs.buildmc.jp/files/ad_002.png", ""]
 ]
 let sidePageTag = '<h3>MENU</h3>';
 for(i = 0; i < sidePage.length; i++){

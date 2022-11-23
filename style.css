@@ -13,10 +13,17 @@ hr{
 }
 
 /*ヘッダー部分のリンク*/
+#topmenu{
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+#topmenu::-webkit-scrollbar{
+	display: none;
+}
 
 #topmenu a{
-	margin: 5px;
-	margin-right: 0;
+	display: inline-block;
+	margin: 5px 3px;
 	padding: 10px;
 	background-color: gold;
 	color: black;
@@ -25,6 +32,7 @@ hr{
 	transition: all 0.3s;
 }
 #topmenu span{
+	display: inline-block;
 	margin: 5px;
 	margin-right: 0;
 	padding: 10px;
