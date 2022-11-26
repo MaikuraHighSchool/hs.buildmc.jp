@@ -1,26 +1,37 @@
-body{
-	font-family: 'ms gothic';
-	min-width: 360px;
-	max-width: 960px;
+*{
+	transition: all 0.3s;
 }
-h1{
-	font-size:2em;
+
+body {
+	/* font-family: 'ms gothic'; */
+	min-width: 370px;
 }
-hr{
+
+h1 {
+	font-size: 2em;
+}
+
+hr {
 	clear: both;
 	border-color: transparent;
 }
 
 /*ヘッダー部分のリンク*/
-#topmenu{
+
+#header #title{
+	text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;
+}
+
+#topmenu {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
-#topmenu::-webkit-scrollbar{
+
+#topmenu::-webkit-scrollbar {
 	display: none;
 }
 
-#topmenu a{
+#topmenu a {
 	display: inline-block;
 	margin: 5px 3px;
 	padding: 10px;
@@ -30,7 +41,8 @@ hr{
 	text-decoration: none;
 	transition: all 0.3s;
 }
-#topmenu span{
+
+#topmenu span {
 	display: inline-block;
 	margin: 5px;
 	margin-right: 0;
@@ -39,17 +51,20 @@ hr{
 	font-weight: bold;
 	text-decoration: none;
 }
-#topmenu a:hover{
+
+#topmenu a:hover {
 	background-color: darkgoldenrod;
 	color: white;
 }
 
 /*本文*/
 
-#maincontent{
+#maincontent {
 	padding: 0 1.5%;
+	padding-bottom: 2em;
 }
-#maincontent h2{
+
+#maincontent h2 {
 	color: white;
 	font-weight: normal;
 	background: linear-gradient(60deg, darkgoldenrod, #000);
@@ -57,29 +72,34 @@ hr{
 	padding: 3px 1%;
 	width: 100%;
 }
-#maincontent p{
+
+#maincontent p {
 	padding-left: 1em;
 }
-#maincontent img{
+
+#maincontent img {
 	width: 100%;
 }
-#maincontent table{
-	border-collapse:separate;
+
+#maincontent table {
+	border-collapse: separate;
 	margin: 0 3%;
 }
-#maincontent td{
+
+#maincontent td {
 	padding: 3px;
 	border-bottom: solid 1px #998;
 }
-#maincontent td:first-child{
-	color:darkgoldenrod ;
+
+#maincontent td:first-child {
+	color: darkgoldenrod;
 	text-align: center;
 	width: 8em;
 }
 
 /*メインコンテンツ用バナーリンク*/
 
-#maincontent a.topic{
+#maincontent a.topic {
 	display: block;
 	float: left;
 	height: 150px;
@@ -88,23 +108,26 @@ hr{
 	background: linear-gradient(120deg, white, darkgoldenrod);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position:bottom;
+	background-position: bottom;
 	text-decoration: none;
 	color: black;
 	text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white, -1px 0px white, 0px -1px white;
 	box-shadow: 1px 1px 4px black;
 	transition: all 0.3s;
 }
-#maincontent a.topic span:nth-child(1){
+
+#maincontent a.topic span:nth-child(1) {
 	display: block;
 	font-size: 1.75em;
 	background-color: #fffe;
 }
-#maincontent a.topic span:nth-child(n + 2){
+
+#maincontent a.topic span:nth-child(n + 2) {
 	display: block;
 	background-color: #fffb;
 }
-#maincontent a.topic:hover{
+
+#maincontent a.topic:hover {
 	color: black;
 	text-shadow: 2px 0px 0px gold, 1px 1px 0px gold, 0px 1px 0px gold, -1px 0px gold, 0px -1px gold;
 	font-weight: bold;
@@ -114,7 +137,7 @@ hr{
 
 /*文字強調*/
 
-.emp-1{
+.emp-1 {
 	color: white;
 	background-color: #998;
 	padding: 0 10px;
@@ -122,7 +145,7 @@ hr{
 
 /*サイドメニュー欄*/
 
-#sideMenu *{
+#sideMenu * {
 	display: inline-block;
 	padding: 8px;
 	border-bottom: solid 1px darkgoldenrod;
@@ -133,27 +156,114 @@ hr{
 	background-size: 100%;
 	background-position: center;
 }
-#sideMenu h3{
+
+#sideMenu h3 {
 	color: white;
 	background-color: darkgoldenrod;
 	width: 100%;
 }
-#sideMenu a.ad{
+
+#sideMenu a.ad {
 	height: 100px;
 	text-shadow: 1px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;
 }
-#sideMenu a:hover{
+
+#sideMenu a:hover {
 	background-color: gold;
 	background-size: 110%;
 }
-#sideMenu :last-child{
+
+#sideMenu :last-child {
 	border-bottom: transparent;
+}
+
+/* ダークテーマ */
+
+#switchBtn {
+	display: block;
+	position: relative;
+	margin: 5px;
+	left: 0;
+	height: 40px;
+	width: 40px;
+	background: white;
+	text-align: center;
+	font-size: 36px;
+	color: darkgoldenrod;
+	text-shadow: none;
+	border-radius: 10px;
+}
+
+#switchBtn span:nth-child(2){
+	display: none;
+}
+
+#switcher:checked ~ #header #switchBtn{
+	background: #333;
+	color: gold;
+	left:45px
+}
+
+/*ダークテーマ適用後*/
+
+#switcher:checked ~ #header #title{
+	background-color: #333;
+	color: darkgoldenrod;
+	text-shadow: 2px 0px 0px black, 1px 1px 0px black, 0px 1px 0px black;
+}
+
+#switcher:checked ~ #header #switchBtn span:nth-child(1){
+	display: none;
+}
+
+#switcher:checked ~ #header #switchBtn span:nth-child(2){
+	display: block;
+}
+
+#switcher:checked ~ #maincontent{
+	background: #000;
+	color: white;
+}
+
+#switcher:checked ~ #maincontent a{
+	color: gold;
+}
+
+#switcher:checked ~ #maincontent a.topic{
+	color: #000;
+}
+
+#switcher:checked ~ #maincontent #sideMenu *{
+	display: inline-block;
+	padding: 8px;
+	border-bottom: solid 1px darkgoldenrod;
+	color: #fff;
+	text-decoration: none;
+	background-size: 100%;
+	background-position: center;
+}
+
+#switcher:checked ~ #maincontent #sideMenu :is(a.ad, span){
+	color: #333;
+}
+
+#switcher:checked ~ #maincontent #sideMenu a:hover{
+	color: #333;
+	background-size: 110%;
 }
 
 /*幅が580px未満の場合*/
 
-@media(max-width:579.9px){
-	#sideMenu a{
+@media(max-width:579.9px) {
+	#maincontent{
+		padding-top: 1px;
+	}
+
+	#sideMenu :first-child{
+		clear: both;
+		margin-top: 0.5em;
+	}
+	#sideMenu a {
 		width: calc(50% - 6px);
 		margin-right: 5px;
 	}
@@ -161,14 +271,16 @@ hr{
 
 /*幅が580px以上の場合*/
 
-@media(min-width:580px){
-	#maincontent{
+@media(min-width:580px) {
+	#maincontent {
 		display: flex;
 	}
-	#maincontent div:first-child{
+
+	#maincontent div:first-child {
 		width: 75%;
 	}
-	#sideMenu{
+
+	#sideMenu {
 		right: 0;
 		min-width: 25%;
 		max-width: 25%;

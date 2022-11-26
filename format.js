@@ -18,7 +18,7 @@ for(i = 0; i < headPage.length; i++){
 	if(headPage[i][0] == header.innerText) tmp = '<span>' + headPage[i][0] + '</span>';
 	headPagetag += tmp;
 }
-header.innerHTML = '<div style="display: flex; background-image: url('+ headerBackImg +');background-size: 50%; background-position: right;"><img src="'+ schoolImg +'" alt="校章" style="height: 6em;object-fit: cover;" /><div style="text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;"><h1>私立真意倉高等学校</h1><span>Maikura High School</span><br /><span>為せば成る、為さなくてもなるようにはなる</span></div></div><div id="topmenu" style="display:flex;white-space:nowrap;height:calc(1em + 30px);overflow-x:scroll ; background-color: black;">'+ headPagetag +'</div>';
+header.innerHTML = '<div style="display: flex; background-image: url('+ headerBackImg +');background-size: 50%; background-position: right;" id="title"><img src="'+ schoolImg +'" alt="校章" style="height: 6em;object-fit: cover;filter: drop-shadow(0 0 5px white)" /><div><h1>私立真意倉高等学校</h1><span>Maikura High School</span><br /><span>為せば成る、為さなくてもなるようにはなる</span></div><div>  <label for="switcher" style="display:block;box-sizing:border-box;margin:10px;width:100px;height:50px;background:#0006;border-radius:8px; border:solid 1px"><div id="switchBtn"><span>明</span><span>暗</span></div> </label>  </div></div><div id="topmenu" style="display:flex;white-space:nowrap;height:calc(1em + 30px);overflow-x:scroll ; background-color: black;">'+ headPagetag +'</div>';
 
 let sideMenu = $("sideMenu");
 //横のメニューバーの内容
@@ -59,7 +59,7 @@ sideMenu.innerHTML = sidePageTag;
 
 let footer = $("footer");
 let update = footer.innerText;
-footer.setAttribute("style", "text-align: center; background-color:darkgoldenrod;padding: 2em 0;color: white;margin-top:2em;");
+footer.setAttribute("style", "text-align: center; background-color:darkgoldenrod;padding: 2em 0;color: white;");
 footer.innerHTML = '(c)2022 真意倉高等学校 | 更新：'+ update +'<br>powered by <a href="https://arrkmekawa.github.io/" target="_blank">芽河製作所</a> | All Rights Reserved.';
 
 
