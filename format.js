@@ -18,7 +18,7 @@ for(i = 0; i < headPage.length; i++){
 	if(headPage[i][0] == header.innerText) tmp = '<span>' + headPage[i][0] + '</span>';
 	headPagetag += tmp;
 }
-header.innerHTML = '<div style="display: flex; background-image: url('+ headerBackImg +');background-size: 50%; background-position: right;" id="title"><img src="'+ schoolImg +'" alt="校章" style="height: 6em;object-fit: cover;filter: drop-shadow(0 0 5px white)" /><div><h1>私立真意倉高等学校</h1><span>Maikura High School</span><br /><span>為せば成る、為さなくてもなるようにはなる</span></div><div>  <label for="switcher" style="display:block;box-sizing:border-box;margin:10px;width:100px;height:50px;background:#0006;border-radius:8px; border:solid 1px"><div id="switchBtn"><span>明</span><span>暗</span></div> </label>  </div></div><div id="topmenu" style="display:flex;white-space:nowrap;height:calc(1em + 30px);overflow-x:scroll ; background-color: black;">'+ headPagetag +'</div>';
+header.innerHTML = '<div style="display: flex; background-image: url('+ headerBackImg +');background-size: calc(60% + 60px); background-position: right;" id="title"><img src="'+ schoolImg +'" alt="校章" style="height: 6em;object-fit: cover;filter: drop-shadow(0 0 5px white)" /><div><h1>私立真意倉高等学校</h1><span>Maikura High School</span><br /><span>CKは現代建築勢。異論は認められていない。</span></div><div>  <label for="switcher" style="display:block;position:absolute;right:0;box-sizing:border-box;margin:10px;width:100px;height:50px;background:#0006;border-radius:8px; border:solid 1px"><div id="switchBtn"><span style="position:relative;top:-7px">☀</span><span style="position:relative;top:-7px">☽</span></div>ﾀﾞｰｸﾃｰﾏ対応</label>  </div></div><div id="topmenu" style="display:flex;white-space:nowrap;height:calc(1em + 30px);overflow-x:scroll ; background-color: black;">'+ headPagetag +'</div>';
 
 let sideMenu = $("sideMenu");
 //横のメニューバーの内容
@@ -50,7 +50,7 @@ for(i = 0; i < sidePage.length; i++){
 	if(sidePage[i][0] == sideMenu.innerText) tmp = '<span style="font-weight:bold;background-color:gold">' + sidePage[i][0] + '</span>';
 	sidePageTag += tmp;
 }
-sidePageTag += '<br>';
+sidePageTag += '<br><h3>外部リンク</h3>';
 for(i = 0; i < ad.length; i++){
 	sidePageTag += '<a href="'+ ad[i][2] +'" style="background-image: url(' +  ad[i][1]+ ');" class="ad" target="_blank">'+ ad[i][0] +'</a>';
 }

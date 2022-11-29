@@ -1,10 +1,20 @@
+@import url(https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;500&display=swap);
+
 *{
-	transition: all 0.3s;
+	transition: all 0.3s ease-out;
 }
 
-body {
+.background {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #fff;
+}
+
+.contents{
 	/* font-family: 'ms gothic'; */
 	min-width: 370px;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 h1 {
@@ -19,7 +29,7 @@ hr {
 /*ヘッダー部分のリンク*/
 
 #header #title{
-	text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white;
+	text-shadow: 2px 0px 3px white, 1px 1px 3px white, 0px 1px 3px white;
 }
 
 #topmenu {
@@ -35,11 +45,11 @@ hr {
 	display: inline-block;
 	margin: 5px 3px;
 	padding: 10px;
+	border-bottom: solid 5px darkgoldenrod;
 	background-color: gold;
 	color: black;
 	font-weight: bold;
 	text-decoration: none;
-	transition: all 0.3s;
 }
 
 #topmenu span {
@@ -113,7 +123,6 @@ hr {
 	color: black;
 	text-shadow: 2px 0px 0px white, 1px 1px 0px white, 0px 1px 0px white, -1px 0px white, 0px -1px white;
 	box-shadow: 1px 1px 4px black;
-	transition: all 0.3s;
 }
 
 #maincontent a.topic span:nth-child(1) {
@@ -148,10 +157,11 @@ hr {
 #sideMenu * {
 	display: inline-block;
 	padding: 8px;
+	border: transparent;
 	border-bottom: solid 1px darkgoldenrod;
+	border-style:dashed;
 	color: #333;
 	text-decoration: none;
-	transition: 0.3s;
 	width: 100%;
 	background-size: 100%;
 	background-position: center;
@@ -171,6 +181,8 @@ hr {
 #sideMenu a:hover {
 	background-color: gold;
 	background-size: 110%;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
 
 #sideMenu :last-child {
@@ -183,10 +195,11 @@ hr {
 	display: block;
 	position: relative;
 	margin: 5px;
-	left: 0;
+	left: 0px;
 	height: 40px;
 	width: 40px;
 	background: white;
+	font-family: 'm+ 1c light';
 	text-align: center;
 	font-size: 36px;
 	color: darkgoldenrod;
@@ -198,7 +211,7 @@ hr {
 	display: none;
 }
 
-#switcher:checked ~ #header #switchBtn{
+#switcher:checked ~ div #switchBtn{
 	background: #333;
 	color: gold;
 	left:45px
@@ -206,34 +219,34 @@ hr {
 
 /*ダークテーマ適用後*/
 
-#switcher:checked ~ #header #title{
+#switcher:checked ~ div #title{
 	background-color: #333;
-	color: darkgoldenrod;
-	text-shadow: 2px 0px 0px black, 1px 1px 0px black, 0px 1px 0px black;
+	color: gold;
+	text-shadow: 2px 0px 3px black, 1px 1px 3px black, 0px 1px 3px black;
 }
 
-#switcher:checked ~ #header #switchBtn span:nth-child(1){
+#switcher:checked ~ div #switchBtn span:nth-child(1){
 	display: none;
 }
 
-#switcher:checked ~ #header #switchBtn span:nth-child(2){
+#switcher:checked ~ div #switchBtn span:nth-child(2){
 	display: block;
 }
 
-#switcher:checked ~ #maincontent{
+#switcher:checked ~ .background{
 	background: #000;
 	color: white;
 }
 
-#switcher:checked ~ #maincontent a{
+#switcher:checked ~ div #maincontent a{
 	color: gold;
 }
 
-#switcher:checked ~ #maincontent a.topic{
+#switcher:checked ~ div #maincontent a.topic{
 	color: #000;
 }
 
-#switcher:checked ~ #maincontent #sideMenu *{
+#switcher:checked ~ div #sideMenu *{
 	display: inline-block;
 	padding: 8px;
 	border-bottom: solid 1px darkgoldenrod;
@@ -243,11 +256,11 @@ hr {
 	background-position: center;
 }
 
-#switcher:checked ~ #maincontent #sideMenu :is(a.ad, span){
+#switcher:checked ~ div #sideMenu :is(a.ad, span){
 	color: #333;
 }
 
-#switcher:checked ~ #maincontent #sideMenu a:hover{
+#switcher:checked ~ div #sideMenu a:hover{
 	color: #333;
 	background-size: 110%;
 }
